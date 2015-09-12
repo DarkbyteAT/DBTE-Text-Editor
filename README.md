@@ -1,4 +1,4 @@
-# DBTE-Text-Editor
+# DBTE Text Editor
 A text editor that can read and write to any file format!
 
 So this is my programming project for GCSE Computer Science (Coursework module A493). I released the source publicly for the simple reason that I don't mind people seeing it.
