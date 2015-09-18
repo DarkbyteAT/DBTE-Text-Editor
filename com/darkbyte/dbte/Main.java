@@ -1,5 +1,7 @@
+//Package Declaration
 package com.darkbyte.dbte;
 
+//Imports from libraries: [Java Default Libraries, Guava]
 import java.awt.*;
 import java.io.*;
 import java.nio.charset.Charset;
@@ -11,16 +13,29 @@ import javax.swing.event.MenuListener;
 
 import com.google.common.io.Files;
 
+//Main class
 public class Main {
+	//Creating a File to store the current file being used
 	private static File currentFile = null;
+	//The text area for the text area
 	private static JTextArea textArea = new JTextArea();
 	
+	//Main method
 	public static void main(String[] args) {
+		//Creating the window
 		Window window = new Window(1280, 720, "DBTE Text Editor", true);
+		//Setting the text area editable
 		textArea.setEditable(true);
 		
+		//Creating the menu bar
 		JMenuBar menuBar = new JMenuBar();
+		//Creating the button to create a new file
 		JMenu newButton = new JMenu("New");
+		/*
+		This uses the DBTEMenuListener class which is an object of the MenuListener interface.
+		This class has a constructor of Runnable of which I created an anonymous inner class.
+		This anonymous inner class contains a method called run(), this is used in the listener and is called whenever the button is selected.
+		*/
 		newButton.addMenuListener(new DBTEMenuListener(new Runnable() {
 
 			@Override
